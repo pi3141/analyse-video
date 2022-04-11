@@ -1,0 +1,89 @@
+body {
+    background-color: aliceblue;
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+h1 {
+    text-align: center;
+    font-size: x-large;
+}
+
+
+#conteneur {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 1200px;
+}
+
+#video_conteneur {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: darkslategrey;
+    margin-right: 10px;
+}
+
+
+#canvas {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    z-index: 10;
+    background-color: rgba(255, 255, 200, 0.0);
+}
+
+
+#video {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    position: static;
+    z-index: -1;
+}
+
+#controles {
+    display: inline-block;
+    flex-direction: column;
+    width: 300px;
+    height: 600px;
+}
+
+#longueur_etalon {
+    width: 6em;
+}
+
+/* Tooltip container: d'après  https://www.w3schools.com/css/css_tooltip.asp */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  border-color: cadetblue;
+  border-style: solid;
+  border-width: 2px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+

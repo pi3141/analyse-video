@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Analyseur de Mouvement</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Analyse du mouvement </h1>    
+    <div id="conteneur">
+      <div id="video_conteneur">
+        <video id="video">
+          <source id="source_video" src="" type="video/mp4" />
+          Charger une vidéo au format mp4
+        </video>
+        <canvas id="canvas"></canvas>
+      </div>
+      <div id="controles">
+        <fieldset>
+          <legend class="tooltip" >Vidéo
+            <span class="tooltiptext">Charger une vidéo au format .mp4, .webm ou .ogg et la parcourir image par image.</span>
+          </legend>          
+          <input id="charger_video" type="file" />
+          <p>
+            <button id="reculer">Reculer</button>
+            <button id="avancer">Avancer</button>
+            <label id="date"></label>
+            <select id="dt">
+              <option value="0.1" selected>10 i/s</option>
+              <option value="0.05">20 i/s</option>
+              <option value="0.03333">30 i/s</option>
+            </select>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend class="tooltip" >Étalonnage 
+            <span class="tooltiptext">Enfoncer le bouton de souris sur le début, glisser sur la fin et lacher le bouton de souris. </span>
+          </legend>
+          <p>
+            <button id="etalonnage">Étalonnage</button>
+            <input
+              id="longueur_etalon"
+              type="number"
+              value="1.00"
+              disabled="true"
+            />
+            <select id="unites" disabled="true">
+              <option value="0">m</option>
+              <option value="-2">cm</option>
+              <option value="-3">mm</option>
+            </select>
+          </p>
+          </fieldset>
+          <fieldset>
+
+          <legend>Origine du repère</legend>
+          <p>
+            <button id="origine">Origine</button>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend class="tooltip">Pointage
+            <span class="tooltiptext">Pointer chaque image. Efface le point de l'image courante. </span>
+          </legend>
+          <p>
+            <button id="pointage">Pointage</button>
+          </p>
+          <p>
+            <button id="effacer">Effacer Point</button>
+            <button id="effacer_tout">Effacer tout</button>
+          </p>
+        </fieldset>
+        <fieldset>          
+            <legend class="tooltip">Exportation
+              <span class="tooltiptext">Copie des données vers le presse papier comme document .csv ou code Python </span>
+            </legend> 
+            
+          
+          <p>
+            <button id="exporter_csv">Exporter .csv</button>
+            <button id="exporter_py">Exporter .py</button>
+          </p>
+        </fieldset>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
