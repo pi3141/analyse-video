@@ -2,6 +2,8 @@
 ## Résumé
 Application web de pointage de vidéo pour l'étude du mouvement. 
 
+Lien vers [l'application](https://physicus68.github.io/analyse-video/)
+
 ![This is an image](capture-video-ecran.png)
 
 Après avoir chargé une vidéo d'un mouvement, on choisit la fréquence des images, on calibre l'échelle des longueurs grâce à un étalon, on choisit l'origine des temps et du repère, puis on pointe image par image la position d'un objet en mouvement. 
