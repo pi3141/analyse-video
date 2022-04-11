@@ -52,8 +52,11 @@ On appuie sur le bouton `Exporter .csv` ou `Exporter .py` , et une copie des val
 
 ## Exemple
 Copie d'écran d'une analyse de vidéo
+
 ![This is an image](capture-video-ecran.png)
+
 Code .csv généré dans le presse papier
+
 ```
 t(s);x(m);y(m)
 0,000;0,189;0,608
@@ -71,6 +74,7 @@ t(s);x(m);y(m)
 ```
 
 Code Python généré dans le presse papier
+
 ```
 t = [
     0.000, 0.100, 0.200, 0.300, 0.400, 0.500, 
