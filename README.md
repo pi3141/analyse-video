@@ -15,15 +15,16 @@ Seules les vidéos aux formats compatibles avec le HTML5 sont prises en charge: 
 
 Le bouton `Parcourir` permet de choisir un fichier vidéo stocké localement sur un disque ou sur un réseau.
 
-On règlera également la fréquence des images à 10 i/s , 20 i/s ou 30 i/s.
+On réglera également la fréquence des images à 10 i/s , 20 i/s ou 30 i/s.
 
 On peut faire défiler image par image la vidéo à l'aide des boutons `Reculer` et `Avancer`.
 
 ## Étalonnage de l'échelle des longueurs
 On active ce mode en cliquant sur le bouton `Étalonnage` qui bascule en couleur jaune.
-On pointe ensuite le début de l'étalon de longueur avec la souris et *en maintenant enfoncé le bouton gauche*, on traine la souris jusqu'à l'autre extérimé de l'étalon puis on lache le bouton. Un trait jaune matérialise l'étalon de longueur choisi. 
 
-On renseigne également la valeur de la longueur de l'étalon ainsi qe l'unité utilisée.
+On pointe ensuite le début de l'étalon de longueur avec la souris et *en maintenant enfoncé le bouton gauche*, on traîne la souris jusqu'à l'autre extrémité de l'étalon puis on lâche le bouton. Un trait jaune matérialise l'étalon de longueur choisi. 
+
+On renseigne également la valeur de la longueur de l'étalon ainsi que l'unité utilisée.
 
 On sort du mode étalonnage en cliquant sur le bouton `Étalonnage`, il redevient gris.
 
@@ -47,7 +48,7 @@ L'exportation permet de coller dans le presse papier un texte qui correspond
   - à une table au format .csv avec le temps , la position x et la position y
   - à un script Python qui stocke les valeurs du temps et des positions dans trois listes et qui affiche la trajectoire avec MathPlot
 
-On appuit sur le bouton `Exporter .csv` ou `Exporter .py` , et une copie des valeurs est faite dans le presse papier. Il faut ensuite faire un coller du texte dans une application capable de gérer le csv ou le script Python.
+On appuie sur le bouton `Exporter .csv` ou `Exporter .py` , et une copie des valeurs est faite dans le presse papier. Il faut ensuite faire un coller du texte dans une application capable de gérer le csv ou le script Python.
 
 ## Exemple
 Copie d'écran d'une analyse de vidéo
