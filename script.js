@@ -31,6 +31,9 @@ const bouton_effacer_tout = document.getElementById("effacer_tout");
 // exportation
 const bouton_exporter_csv = document.getElementById("exporter_csv");
 const bouton_exporter_py = document.getElementById("exporter_py");
+// tooltip
+const tooltip = document.getElementById("tooltip");
+
 
 /********************************************************************
 
@@ -66,6 +69,7 @@ let etat_GUI = {
   },
 
   mode_etalonnage: function () {
+    display_tooltip("etalonnage");
     this.disable_nav_video(false);
     choix_dt.disabled = false;
     this.disable_etalonnage(false);
@@ -75,6 +79,7 @@ let etat_GUI = {
   },
 
   mode_pointage: function () {
+    display_tooltip("pointage");
     this.disable_nav_video(false);
     choix_dt.disabled = true;
     this.disable_etalonnage(true);
@@ -84,6 +89,7 @@ let etat_GUI = {
   },
 
   mode_origine: function () {
+    display_tooltip("origine");
     this.disable_nav_video(false);
     choix_dt.disabled = false;
     this.disable_etalonnage(true);
@@ -122,6 +128,35 @@ let etat_GUI = {
     bouton_origine.disabled = b;
   },
 };
+
+/********************************************************************
+
+  Tooltip
+
+********************************************************************/
+function display_tooltip(step){
+  switch (step){
+    case "chargement":
+      tooltip.innerText="Sélectionner une vidéo"
+      break;
+    case "etalonnage":
+      tooltip.innerText="Mesurer l’étalon en maintenant le clic"
+      break;
+    case "pointage":
+      tooltip.innerText="Cliquer pour repérer la position de l’objet. Vous pouvez zoomer avec Ctrl + roulette de la souris."
+      break;
+    case "origine":
+      tooltip.innerText="Placer l’origine du repère."
+      break;
+    case "export":
+      tooltip.innerText="Les données ont été copiés dans le presse-papier."
+      break;
+
+  }
+  tooltip.style.opacity = .8;
+  setTimeout(() => {tooltip.style.opacity = 0;}, 5000);
+}
+
 
 /********************************************************************
 
@@ -314,6 +349,8 @@ let modele = {
 
 ********************************************************************/
 modele.init();
+display_tooltip("chargement")
+
 
 /********************************************************************
 
@@ -521,6 +558,7 @@ bouton_effacer_tout.addEventListener("click", function () {
 ********************************************************************/
 bouton_exporter_csv.addEventListener("click", function () {
   navigator.clipboard.writeText(modele.exporter_csv());
+  display_tooltip("export");
 });
 
 /********************************************************************
@@ -530,4 +568,5 @@ bouton_exporter_csv.addEventListener("click", function () {
 ********************************************************************/
 bouton_exporter_py.addEventListener("click", function () {
   navigator.clipboard.writeText(modele.exporter_py());
+  display_tooltip("export");
 });
