@@ -87,6 +87,7 @@ let etat_GUI = {
     this.disable_nav_video(false);
     choix_dt.disabled = false;
     this.disable_etalonnage(true);
+    this.disable_etalonnage_valeurs(true);
     this.disable_origine(false);
     this.disable_pointage(true);
     this.disable_export(true);
@@ -108,10 +109,13 @@ let etat_GUI = {
     bouton_effacer_tout.disabled = b;
   },
 
-  disable_etalonnage: function (b) {
-    bouton_etalonnage.disabled = b;
+  disable_etalonnage_valeurs: function (b){
     valeur_etalon.disabled = b;
     unite_etalon.disabled = b;
+  },
+
+  disable_etalonnage: function (b) {
+    bouton_etalonnage.disabled = b;
   },
 
   disable_origine: function (b) {
@@ -386,6 +390,7 @@ bouton_etalonnage.addEventListener("click", function () {
     mon_canvas.canvas.removeEventListener("mouseup", choix_fin_echelle);
     mon_canvas.canvas.removeEventListener("mousemove", choix_pendant_echelle);
     bouton_etalonnage.style.backgroundColor = "";
+    etat_GUI.disable_etalonnage_valeurs(true);
     etat_GUI.mode_video_chargee();
   }
 });
@@ -402,7 +407,8 @@ function choix_pendant_echelle(e) {
 }
 function choix_fin_echelle(e) {
   TRACER = false;
-  modele.setPointB(e.layerX , e.layerY);         
+  modele.setPointB(e.layerX , e.layerY);
+  etat_GUI.disable_etalonnage_valeurs(false);
 }
 
 /********************************************************************
