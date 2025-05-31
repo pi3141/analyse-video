@@ -13,6 +13,7 @@ const mon_canvas = {
 };
 // controles de la vidéo
 const charger_video = document.getElementById("charger_video");
+charger_video.value = "";
 const img_precedente = document.getElementById("reculer");
 const img_suivante = document.getElementById("avancer");
 const choix_dt = document.getElementById("dt");
