@@ -285,9 +285,6 @@ let modele = {
     tableau_y = tableau_y + "\n" + ligne_y + "\n    ]";   
     
     let code = tableau_t + "\n\n" + tableau_x + "\n\n" + tableau_y + "\n\n";
-    code =  code + "import matplotlib.pyplot as plt\nplt.plot(x , y, 'r+' )\n";
-    code =  code + "plt.axis('equal')\n";
-    code =  code + "plt.xlabel('x (m)')\nplt.ylabel('y (m)')\nplt.show()\n";
     return code;
   },
 
