@@ -289,15 +289,15 @@ let modele = {
   },
 
   video_reculer : function(){
-    if (video.currentTime - modele.dt > -modele.dt) {
-      video.currentTime = video.currentTime - modele.dt;
+    if (video.currentTime - modele.dt - 0.002 > -modele.dt) {
+      video.currentTime = video.currentTime - modele.dt - 0.002;
       this.updateViews();
     }
   },
 
   video_avancer : function () {
-    if (video.currentTime + modele.dt < video.duration) {
-      video.currentTime = video.currentTime + modele.dt;
+    if (video.currentTime + modele.dt + 0.002< video.duration) {
+      video.currentTime = video.currentTime + modele.dt + 0.002;
       this.updateViews();
     }
   },
